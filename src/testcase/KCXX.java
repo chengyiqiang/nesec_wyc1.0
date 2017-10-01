@@ -3,5 +3,7 @@ package testcase;
 public class KCXX {
 
 	//ÓÃÀı±àºÅ
-	public void KCXX_001
+	public void KCXX_001(){
+		
+	}
 }

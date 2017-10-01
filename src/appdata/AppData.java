@@ -10,7 +10,8 @@ public class AppData {
 	
 	//数据信息
 	//设备名称
-	public static String devicesName = "faf6d064";
+//	public static String devicesName = "faf6d064";
+	public static String devicesName = "QDY4C17523003538";
 	//设备操作平台
 	public static String platformName = "Android";
 //	public static String platformVersion = "";
@@ -19,7 +20,8 @@ public class AppData {
 	//apk主activity
 	public static String appActivity = "com.nesun.netarrangecar.activity.WelcomeActivity";
 	//设备安卓版本
-	public static String version = "4.4.4";
+//	public static String version = "4.4.4";
+	public static String version = "7.0";
 	public static String urlString = "http://127.0.0.1:4723/wd/hub";
 
 	//设置日期格式
