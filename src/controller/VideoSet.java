@@ -3,7 +3,7 @@ package controller;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-public class videoSet {
+public class VideoSet {
 
 	// 点击视频并开始学习
 	public static void watchVideo(String sectionName) {
@@ -23,10 +23,9 @@ public class videoSet {
 		WebElement webElement = null;
 		try {
 			Thread.sleep(5000);
-			SetApp.touchAction.press(SetApp.width / 2, SetApp.hight / 2)
-					.release().perform();
+			SetApp.clickCoordinate(SetApp.width / 2, SetApp.hight / 2);
 			Thread.sleep(1000);
-			webElement = SetApp.driver.findElement(by);
+			webElement = SetApp.getElement(by);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -99,15 +98,13 @@ public class videoSet {
 	public static void dragSeekBar(String backOrFront) {
 		try {
 			Thread.sleep(5000);
-			SetApp.touchAction.press(SetApp.width / 2, SetApp.hight / 2)
-					.release().perform();
+			SetApp.clickCoordinate(SetApp.width / 2, SetApp.hight / 2);
 			Thread.sleep(1000);
-			int hight = SetApp.getMidHight(SetApp.driver.findElement(By
-					.id("com.nesec.jxjy_phone:id/seekbar")));
+			int hight = SetApp.getMidHight(SetApp.getElement(By.id("com.nesec.jxjy_phone:id/seekbar")));
 			if (backOrFront.equals("front")) {
-				SetApp.driver.swipe(100, hight, 400, hight, 1500);
+				SetApp.swipe(100, hight, 400, hight);
 			} else if (backOrFront.equals("back")) {
-				SetApp.driver.swipe(400, hight, 100, hight, 1500);
+				SetApp.swipe(400, hight, 100, hight);
 			} else {
 				System.out.println("\"backOrFront\"参数必须为back或front");
 			}
