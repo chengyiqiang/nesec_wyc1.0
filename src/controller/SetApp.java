@@ -38,7 +38,7 @@ public class SetApp {
 
 	public static void setApp() {
 		// 设置设备名称
-		dcp.setCapability("deviceName", AppData.devicesName);
+		dcp.setCapability("deviceName", AppData.deviceName);
 		// 设置平台名称 iOS；android
 		dcp.setCapability("platformName", AppData.platformName);
 		// android 版本
@@ -142,7 +142,7 @@ public class SetApp {
 		} catch (Exception e) {
 			result = false;
 			e.printStackTrace();
-			System.out.println("根滑动屏幕异常");
+			System.out.println("滑动屏幕异常");
 		}
 		return result;
 	}
